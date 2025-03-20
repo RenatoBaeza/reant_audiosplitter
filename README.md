@@ -28,7 +28,7 @@ A Python tool for splitting audio tracks into separate instrument and vocal comp
 
 2. Install dependencies:
    ```
-   pip install torch torchaudio numpy demucs
+   pip install -r requirements.txt
    ```
 
 ## Usage
@@ -49,6 +49,25 @@ python separate_audio.py --input your_audio_file.mp3
 - `--chunk-size`: Chunk size in seconds (default: 6)
 - `--split`: Use split separation
 - `--output_dir`: Output directory (default: separated)
+
+## Testing
+
+The project includes a comprehensive test suite using pytest. To run the tests:
+
+```
+pytest
+```
+
+To run tests with coverage report:
+
+```
+pytest --cov=. tests/
+```
+
+The test suite includes:
+- Unit tests for configuration management
+- Tests for audio processing functionality
+- Logger and utility function tests
 
 ## Output
 

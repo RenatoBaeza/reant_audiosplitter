@@ -1,0 +1,24 @@
+# Audio Splitter Configuration
+
+# Default model configuration
+model:
+  name: htdemucs  # Options: htdemucs, htdemucs_ft, mdx_extra, mdx_extra_q
+  device: auto  # Options: auto, cuda, cpu (auto will use cuda if available)
+  shifts: 2
+  split: false
+  overlap: 0.25
+
+# Processing configuration
+processing:
+  chunk_size: 6  # in seconds
+  
+# Output configuration
+output:
+  directory: separated
+  format: wav  # Options: wav, mp3, flac
+
+# Logging configuration
+logging:
+  level: INFO  # Options: DEBUG, INFO, WARNING, ERROR, CRITICAL
+  file: audiosplitter.log
+  console: true 
